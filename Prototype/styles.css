@@ -1,0 +1,216 @@
+/* CSS for Taniti Website
+
+Color Palette:
+(from coolors.com)
+Cerulean Blue: #485BC6
+Green Sheen: #70C1B3
+Turqoise Green: #B2DBBF
+Light Goldenrod Yellow: #FFFFD9
+Orange Soda: #F06449
+*/
+
+body {
+  font-family: helvetica, verdana, sans-serif;
+  min-height: 100vh;  /* Ensures that the bottom of the grid is at least the bottom of the viewport */
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto 1fr auto auto;  /*header main footer */
+  font-size: 18px;
+}
+
+header {
+  grid-column: 1 / 13;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+main {
+  grid-column: 5 / 13;
+  grid-row: 2 / 4;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+article {
+  line-height: 2;
+}
+
+article h1,
+article h2 {
+  text-align: center;
+}
+
+aside {
+  grid-column: 1 / 5;
+  grid-row: 2 / 4;
+  background-color: #FFFFD9;  /* Light Goldenrod Yellow */
+  text-align: center;
+}
+
+footer {
+  grid-column: 1 / 13;
+  grid-row: 4 / 5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #485BC6;  /* Cerulean Blue */
+  color: white;
+  font-size: 16px;
+}
+
+figure {
+  text-align: center;
+}
+
+.copyright {
+  margin: 10px;
+}
+
+.centeredText {
+  text-align: center;
+}
+
+.question {
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.answer {
+  margin-left: 35px;
+}
+
+/* For images that will be flexed into a row */
+.flexImages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.flexImages figcaption {
+  text-align: center;
+}
+
+.imageBig {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imageSmall {
+  max-width: 400px;
+  display: block;
+  margin: 10px auto;
+}
+
+.imageVerySmall {
+  width: 250px;
+  display: block;
+  margin: 10px auto;
+}
+
+.asidePicture {
+  display: block;
+  margin: 5px 10px;
+  max-width: 300px;
+}
+
+.asideLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
+}
+
+.asideLink ul {
+  list-style-type: none;
+}
+
+.asideLink ul li a {
+  display: block;
+  padding: 10px;
+  margin: 5px;
+}
+
+.floatRight {
+  float: right;
+  margin: 10px;
+}
+
+/* clearfix for floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.navLinks ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.navLinks ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  padding: 1.2em;
+  font-size: inherit;
+}
+
+#mainNav {
+  grid-column: 1 / 13;
+  grid-row: 2 / 3;
+  background-color: #485BC6;  /* Cerulean Blue */
+  margin-top: 0px;
+  font-size: 20px;
+  width: 100%;
+}
+
+#siteLogo {
+  min-width: 100px;
+  max-width: 300px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#slogan {
+  padding: 10px;
+  font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  color: #70C1B3;  /*Green Sheen */
+  margin-right: 10px;
+  font-size: 2.8em;
+}
+
+#footerNav ul li a {
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 850px) {
+  main {
+    grid-column: 1 / 13;
+    grid-row: 2 / 3;
+  }
+
+  aside {
+    grid-column: 1 / 13;
+    grid-row: 3 / 4;
+  }
+
+  .floatRight {
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
